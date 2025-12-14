@@ -9,6 +9,7 @@ import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addMonths, su
 import { Calendar as CalendarIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 interface Task {
   id: string;
@@ -34,7 +35,7 @@ export default function CalendarPage() {
         // Get tasks for the current month
         const start = startOfMonth(currentDate);
         const end = endOfMonth(currentDate);
-        
+
         const userTasks = await db
           .select({
             id: tasks.id,
@@ -123,9 +124,9 @@ export default function CalendarPage() {
       for (let i = 0; i < 7; i++) {
         formattedDate = format(day, 'd');
         const cloneDay = day;
-        
+
         // Get tasks for this day
-        const dayTasks = tasks.filter(task => 
+        const dayTasks = tasks.filter(task =>
           isSameDay(new Date(task.dueAt), cloneDay)
         );
 
@@ -142,14 +143,14 @@ export default function CalendarPage() {
             </div>
             <div className="p-1 space-y-1 max-h-20 overflow-y-auto">
               {dayTasks.map(task => (
-                <div 
-                  key={task.id} 
+                <div
+                  key={task.id}
                   className={`text-xs p-1 rounded truncate ${
-                    task.isCompleted 
-                      ? 'bg-gray-200 text-gray-500 line-through' 
+                    task.isCompleted
+                      ? 'bg-gray-200 text-gray-500 line-through'
                       : `border-l-2 pl-2`
                   }`}
-                  style={{ 
+                  style={{
                     borderLeftColor: task.projectColor,
                     backgroundColor: `${task.projectColor}20`
                   }}
@@ -174,8 +175,8 @@ export default function CalendarPage() {
 
   const getSelectedDateTasks = () => {
     if (!selectedDate) return [];
-    
-    return tasks.filter(task => 
+
+    return tasks.filter(task =>
       isSameDay(new Date(task.dueAt), selectedDate)
     );
   };
@@ -188,7 +189,7 @@ export default function CalendarPage() {
           <CalendarIcon className="mr-2 h-4 w-4" /> New Task
         </Button>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <Card>
@@ -201,7 +202,7 @@ export default function CalendarPage() {
             </CardContent>
           </Card>
         </div>
-        
+
         <div>
           <Card>
             <CardHeader>
@@ -214,18 +215,24 @@ export default function CalendarPage() {
                 getSelectedDateTasks().length > 0 ? (
                   <div className="space-y-3">
                     {getSelectedDateTasks().map(task => (
-                      <div 
-                        key={task.id} 
+                      <div
+                        key={task.id}
                         className={`p-3 rounded border-l-4 ${
-                          task.isCompleted 
-                            ? 'bg-gray-100 text-gray-500 line-through' 
+                          task.isCompleted
+                            ? 'bg-gray-100 text-gray-500 line-through'
                             : 'bg-white'
                         }`}
                         style={{ borderLeftColor: task.projectColor }}
                       >
                         <div className="font-medium">{task.title}</div>
                         <div className="text-sm text-muted-foreground">
-                          {task.projectName}
+                          <Badge
+                            variant="secondary"
+                            style={{ backgroundColor: `${task.projectColor}20`, color: task.projectColor }}
+                            className="text-xs"
+                          >
+                            {task.projectName}
+                          </Badge>
                         </div>
                       </div>
                     ))}
