@@ -24,7 +24,7 @@ interface Task {
 export default function CalendarPage() {
   const { user } = useUser();
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [userTasks, setTasks] = useState<Task[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function CalendarPage() {
         const start = startOfMonth(currentDate);
         const end = endOfMonth(currentDate);
 
-        const userTasks = await db
+        const fetchedTasks = await db
           .select({
             id: tasks.id,
             title: tasks.title,
@@ -56,7 +56,7 @@ export default function CalendarPage() {
             )
           );
 
-        setTasks(userTasks);
+        setTasks(fetchedTasks);
       } catch (error) {
         console.error('Error fetching tasks:', error);
       }
@@ -126,7 +126,7 @@ export default function CalendarPage() {
         const cloneDay = day;
 
         // Get tasks for this day
-        const dayTasks = tasks.filter(task =>
+        const dayTasks = userTasks.filter(task =>
           isSameDay(new Date(task.dueAt), cloneDay)
         );
 
@@ -176,7 +176,7 @@ export default function CalendarPage() {
   const getSelectedDateTasks = () => {
     if (!selectedDate) return [];
 
-    return tasks.filter(task =>
+    return userTasks.filter(task =>
       isSameDay(new Date(task.dueAt), selectedDate)
     );
   };
