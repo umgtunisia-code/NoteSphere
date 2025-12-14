@@ -15,10 +15,10 @@ interface Task {
   id: string;
   title: string;
   dueAt: Date;
-  isCompleted: boolean;
+  isCompleted: boolean | null;
   projectId: string;
   projectName: string;
-  projectColor: string;
+  projectColor: string | null;
 }
 
 export default function CalendarPage() {
@@ -151,8 +151,8 @@ export default function CalendarPage() {
                       : `border-l-2 pl-2`
                   }`}
                   style={{
-                    borderLeftColor: task.projectColor,
-                    backgroundColor: `${task.projectColor}20`
+                    borderLeftColor: task.projectColor || '#3B82F6',
+                    backgroundColor: `${task.projectColor || '#3B82F6'}20`
                   }}
                 >
                   {task.title}
@@ -222,13 +222,13 @@ export default function CalendarPage() {
                             ? 'bg-gray-100 text-gray-500 line-through'
                             : 'bg-white'
                         }`}
-                        style={{ borderLeftColor: task.projectColor }}
+                        style={{ borderLeftColor: task.projectColor || '#3B82F6' }}
                       >
                         <div className="font-medium">{task.title}</div>
                         <div className="text-sm text-muted-foreground">
                           <Badge
                             variant="secondary"
-                            style={{ backgroundColor: `${task.projectColor}20`, color: task.projectColor }}
+                            style={{ backgroundColor: `${task.projectColor || '#3B82F6'}20`, color: task.projectColor || '#3B82F6' }}
                             className="text-xs"
                           >
                             {task.projectName}

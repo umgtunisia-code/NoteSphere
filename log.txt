@@ -1,53 +1,58 @@
-20:27:02.242 Running build in Portland, USA (West) – pdx1
-20:27:02.243 Build machine configuration: 2 cores, 8 GB
-20:27:02.347 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: f85ab64)
-20:27:02.347 Previous build caches not available.
-20:27:02.801 Cloning completed: 454.000ms
-20:27:03.190 Running "vercel build"
-20:27:03.599 Vercel CLI 50.0.1
-20:27:03.754 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-20:27:03.890 Installing dependencies...
-20:27:06.685 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-20:27:07.130 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-20:27:07.233 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-20:27:08.464 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-20:27:08.483 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
-20:27:08.491 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-20:27:08.501 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
-20:27:11.662 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-20:27:17.707 
-20:27:17.708 added 566 packages in 14s
-20:27:17.709 
-20:27:17.709 188 packages are looking for funding
-20:27:17.709   run `npm fund` for details
-20:27:17.772 Detected Next.js version: 14.2.35
-20:27:17.777 Running "npm run build"
-20:27:17.871 
-20:27:17.872 > notesphere@0.1.0 build
-20:27:17.872 > next build
-20:27:17.872 
-20:27:18.374 Attention: Next.js now collects completely anonymous telemetry regarding usage.
-20:27:18.375 This information is used to shape Next.js' roadmap and prioritize features.
-20:27:18.375 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-20:27:18.375 https://nextjs.org/telemetry
-20:27:18.375 
-20:27:18.425   ▲ Next.js 14.2.35
-20:27:18.425   - Environments: .env.local
-20:27:18.426 
-20:27:18.442    Creating an optimized production build ...
-20:27:42.347  ✓ Compiled successfully
-20:27:42.348    Linting and checking validity of types ...
-20:27:48.215 Failed to compile.
-20:27:48.215 
-20:27:48.216 ./src/app/calendar/page.tsx:41:23
-20:27:48.216 Type error: Property 'id' does not exist on type 'Task[]'.
-20:27:48.216 
-20:27:48.216 [0m [90m 39 |[39m         [36mconst[39m userTasks [33m=[39m [36mawait[39m db[0m
-20:27:48.217 [0m [90m 40 |[39m           [33m.[39mselect({[0m
-20:27:48.217 [0m[31m[1m>[22m[39m[90m 41 |[39m             id[33m:[39m tasks[33m.[39mid[33m,[39m[0m
-20:27:48.217 [0m [90m    |[39m                       [31m[1m^[22m[39m[0m
-20:27:48.217 [0m [90m 42 |[39m             title[33m:[39m tasks[33m.[39mtitle[33m,[39m[0m
-20:27:48.217 [0m [90m 43 |[39m             dueAt[33m:[39m tasks[33m.[39mdueAt[33m,[39m[0m
-20:27:48.217 [0m [90m 44 |[39m             isCompleted[33m:[39m tasks[33m.[39misCompleted[33m,[39m[0m
-20:27:48.248 Next.js build worker exited with code: 1 and signal: null
-20:27:48.269 Error: Command "npm run build" exited with 1
+20:29:31.020 Running build in Portland, USA (West) – pdx1
+20:29:31.020 Build machine configuration: 2 cores, 8 GB
+20:29:31.127 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 452a9bd)
+20:29:31.128 Previous build caches not available.
+20:29:31.518 Cloning completed: 391.000ms
+20:29:31.888 Running "vercel build"
+20:29:32.326 Vercel CLI 50.0.1
+20:29:32.481 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+20:29:32.625 Installing dependencies...
+20:29:35.180 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+20:29:35.942 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+20:29:36.028 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+20:29:37.391 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+20:29:37.392 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+20:29:37.439 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+20:29:37.462 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+20:29:40.694 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+20:29:46.611 
+20:29:46.612 added 566 packages in 14s
+20:29:46.612 
+20:29:46.612 188 packages are looking for funding
+20:29:46.612   run `npm fund` for details
+20:29:46.670 Detected Next.js version: 14.2.35
+20:29:46.675 Running "npm run build"
+20:29:46.774 
+20:29:46.774 > notesphere@0.1.0 build
+20:29:46.774 > next build
+20:29:46.774 
+20:29:47.301 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+20:29:47.303 This information is used to shape Next.js' roadmap and prioritize features.
+20:29:47.303 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+20:29:47.304 https://nextjs.org/telemetry
+20:29:47.304 
+20:29:47.354   ▲ Next.js 14.2.35
+20:29:47.355   - Environments: .env.local
+20:29:47.355 
+20:29:47.374    Creating an optimized production build ...
+20:30:12.545  ✓ Compiled successfully
+20:30:12.546    Linting and checking validity of types ...
+20:30:18.430 Failed to compile.
+20:30:18.431 
+20:30:18.432 ./src/app/calendar/page.tsx:59:18
+20:30:18.432 Type error: Argument of type '{ id: string; title: string; dueAt: Date; isCompleted: boolean | null; projectId: string; projectName: string; projectColor: string | null; }[]' is not assignable to parameter of type 'SetStateAction<Task[]>'.
+20:30:18.432   Type '{ id: string; title: string; dueAt: Date; isCompleted: boolean | null; projectId: string; projectName: string; projectColor: string | null; }[]' is not assignable to type 'Task[]'.
+20:30:18.433     Type '{ id: string; title: string; dueAt: Date; isCompleted: boolean | null; projectId: string; projectName: string; projectColor: string | null; }' is not assignable to type 'Task'.
+20:30:18.433       Types of property 'isCompleted' are incompatible.
+20:30:18.433         Type 'boolean | null' is not assignable to type 'boolean'.
+20:30:18.433           Type 'null' is not assignable to type 'boolean'.
+20:30:18.433 
+20:30:18.434 [0m [90m 57 |[39m           )[33m;[39m[0m
+20:30:18.434 [0m [90m 58 |[39m[0m
+20:30:18.434 [0m[31m[1m>[22m[39m[90m 59 |[39m         setTasks(fetchedTasks)[33m;[39m[0m
+20:30:18.434 [0m [90m    |[39m                  [31m[1m^[22m[39m[0m
+20:30:18.434 [0m [90m 60 |[39m       } [36mcatch[39m (error) {[0m
+20:30:18.435 [0m [90m 61 |[39m         console[33m.[39merror([32m'Error fetching tasks:'[39m[33m,[39m error)[33m;[39m[0m
+20:30:18.435 [0m [90m 62 |[39m       }[0m
+20:30:18.466 Next.js build worker exited with code: 1 and signal: null
+20:30:18.486 Error: Command "npm run build" exited with 1
