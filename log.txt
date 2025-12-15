@@ -1,303 +1,105 @@
-11:48:58.141 Running build in Portland, USA (West) – pdx1
-11:48:58.141 Build machine configuration: 2 cores, 8 GB
-11:48:58.246 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: c6d8443)
-11:48:58.247 Previous build caches not available.
-11:48:58.671 Cloning completed: 425.000ms
-11:48:59.041 Running "vercel build"
-11:48:59.456 Vercel CLI 50.0.1
-11:48:59.610 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-11:48:59.748 Installing dependencies...
-11:49:04.931 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-11:49:05.526 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-11:49:05.660 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-11:49:06.564 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-11:49:06.577 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
-11:49:06.590 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
-11:49:06.601 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-11:49:09.510 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-11:49:14.125 npm warn deprecated next@14.2.32: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
-11:49:14.550 
-11:49:14.550 added 565 packages in 15s
-11:49:14.551 
-11:49:14.552 188 packages are looking for funding
-11:49:14.552   run `npm fund` for details
-11:49:14.604 Detected Next.js version: 14.2.32
-11:49:14.609 Running "npm run build"
-11:49:14.705 
-11:49:14.705 > notesphere@0.1.0 build
-11:49:14.705 > next build
-11:49:14.706 
-11:49:15.225 Attention: Next.js now collects completely anonymous telemetry regarding usage.
-11:49:15.226 This information is used to shape Next.js' roadmap and prioritize features.
-11:49:15.226 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-11:49:15.226 https://nextjs.org/telemetry
-11:49:15.227 
-11:49:15.276   ▲ Next.js 14.2.32
-11:49:15.277   - Environments: .env.local
-11:49:15.278 
-11:49:15.294    Creating an optimized production build ...
-11:49:21.027 Failed to compile.
-11:49:21.027 
-11:49:21.027 ./src/app/calendar/page.tsx
-11:49:21.027 Error: 
-11:49:21.027   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
-11:49:21.027    ,-[[36;1;4m/vercel/path0/src/app/calendar/page.tsx[0m:1:1]
-11:49:21.027  [2m1[0m | export const dynamic = 'force-dynamic';
-11:49:21.027  [2m2[0m | 
-11:49:21.027  [2m3[0m | 'use client';
-11:49:21.027    : [31;1m^^^^^^^^^^^^^[0m
-11:49:21.027  [2m4[0m | 
-11:49:21.027  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.028  [2m6[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.028    `----
-11:49:21.028 
-11:49:21.028   [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.028   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.028   [31m|[0m 
-11:49:21.028   [31m|[0m 
-11:49:21.028    ,-[[36;1;4m/vercel/path0/src/app/calendar/page.tsx[0m:2:1]
-11:49:21.028  [2m2[0m | 
-11:49:21.028  [2m3[0m | 'use client';
-11:49:21.028  [2m4[0m | 
-11:49:21.028  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.028    : [31;1m         ^^^^^^^^[0m
-11:49:21.028  [2m6[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.028  [2m7[0m | import { db } from '@/lib/db';
-11:49:21.028  [2m8[0m | import { tasks, projects } from '@/lib/db/schema';
-11:49:21.029    `----
-11:49:21.029 
-11:49:21.029   [31mx[0m You're importing a component that needs useEffect. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.029   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.029   [31m|[0m 
-11:49:21.029   [31m|[0m 
-11:49:21.029    ,-[[36;1;4m/vercel/path0/src/app/calendar/page.tsx[0m:2:1]
-11:49:21.029  [2m2[0m | 
-11:49:21.029  [2m3[0m | 'use client';
-11:49:21.029  [2m4[0m | 
-11:49:21.029  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.029    : [31;1m                   ^^^^^^^^^[0m
-11:49:21.029  [2m6[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.029  [2m7[0m | import { db } from '@/lib/db';
-11:49:21.029  [2m8[0m | import { tasks, projects } from '@/lib/db/schema';
-11:49:21.029    `----
-11:49:21.029 
-11:49:21.030 Import trace for requested module:
-11:49:21.030 ./src/app/calendar/page.tsx
-11:49:21.030 
-11:49:21.030 ./src/app/notes/[id]/page.tsx
-11:49:21.030 Error: 
-11:49:21.030   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
-11:49:21.030    ,-[[36;1;4m/vercel/path0/src/app/notes/[id]/page.tsx[0m:1:1]
-11:49:21.030  [2m1[0m | export const dynamic = 'force-dynamic';
-11:49:21.030  [2m2[0m | 
-11:49:21.030  [2m3[0m | 'use client';
-11:49:21.030    : [31;1m^^^^^^^^^^^^^[0m
-11:49:21.030  [2m4[0m | 
-11:49:21.030  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.030  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.030    `----
-11:49:21.030 
-11:49:21.033   [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.033   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.033   [31m|[0m 
-11:49:21.033   [31m|[0m 
-11:49:21.033    ,-[[36;1;4m/vercel/path0/src/app/notes/[id]/page.tsx[0m:2:1]
-11:49:21.033  [2m2[0m | 
-11:49:21.033  [2m3[0m | 'use client';
-11:49:21.033  [2m4[0m | 
-11:49:21.034  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.034    : [31;1m         ^^^^^^^^[0m
-11:49:21.034  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.037  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.037  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.037    `----
-11:49:21.037 
-11:49:21.037   [31mx[0m You're importing a component that needs useEffect. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.038   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.038   [31m|[0m 
-11:49:21.038   [31m|[0m 
-11:49:21.038    ,-[[36;1;4m/vercel/path0/src/app/notes/[id]/page.tsx[0m:2:1]
-11:49:21.038  [2m2[0m | 
-11:49:21.038  [2m3[0m | 'use client';
-11:49:21.038  [2m4[0m | 
-11:49:21.038  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.038    : [31;1m                   ^^^^^^^^^[0m
-11:49:21.038  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.038  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.038  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.038    `----
-11:49:21.038 
-11:49:21.038   [31mx[0m You're importing a component that needs useParams. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.039   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.039   [31m|[0m 
-11:49:21.039   [31m|[0m 
-11:49:21.039    ,-[[36;1;4m/vercel/path0/src/app/notes/[id]/page.tsx[0m:3:1]
-11:49:21.039  [2m3[0m | 'use client';
-11:49:21.039  [2m4[0m | 
-11:49:21.039  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.039  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.039    : [31;1m         ^^^^^^^^^[0m
-11:49:21.039  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.039  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.039  [2m9[0m | import { notes, projects } from '@/lib/db/schema';
-11:49:21.039    `----
-11:49:21.039 
-11:49:21.039 Import trace for requested module:
-11:49:21.039 ./src/app/notes/[id]/page.tsx
-11:49:21.039 
-11:49:21.039 ./src/app/page.tsx
-11:49:21.039 Error: 
-11:49:21.039   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
-11:49:21.039    ,-[[36;1;4m/vercel/path0/src/app/page.tsx[0m:1:1]
-11:49:21.039  [2m1[0m | export const dynamic = 'force-dynamic';
-11:49:21.039  [2m2[0m | 
-11:49:21.040  [2m3[0m | 'use client';
-11:49:21.040    : [31;1m^^^^^^^^^^^^^[0m
-11:49:21.040  [2m4[0m | 
-11:49:21.040  [2m5[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.040  [2m6[0m | import { redirect } from 'next/navigation';
-11:49:21.040    `----
-11:49:21.040 
-11:49:21.040 Import trace for requested module:
-11:49:21.040 ./src/app/page.tsx
-11:49:21.040 
-11:49:21.040 ./src/app/projects/[id]/page.tsx
-11:49:21.040 Error: 
-11:49:21.040   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
-11:49:21.040    ,-[[36;1;4m/vercel/path0/src/app/projects/[id]/page.tsx[0m:1:1]
-11:49:21.040  [2m1[0m | export const dynamic = 'force-dynamic';
-11:49:21.040  [2m2[0m | 
-11:49:21.040  [2m3[0m | 'use client';
-11:49:21.040    : [31;1m^^^^^^^^^^^^^[0m
-11:49:21.040  [2m4[0m | 
-11:49:21.040  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.040  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.040    `----
-11:49:21.040 
-11:49:21.041   [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.041   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.041   [31m|[0m 
-11:49:21.041   [31m|[0m 
-11:49:21.041    ,-[[36;1;4m/vercel/path0/src/app/projects/[id]/page.tsx[0m:2:1]
-11:49:21.041  [2m2[0m | 
-11:49:21.041  [2m3[0m | 'use client';
-11:49:21.041  [2m4[0m | 
-11:49:21.041  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.041    : [31;1m         ^^^^^^^^[0m
-11:49:21.041  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.041  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.041  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.041    `----
-11:49:21.041 
-11:49:21.041   [31mx[0m You're importing a component that needs useEffect. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.041   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.041   [31m|[0m 
-11:49:21.041   [31m|[0m 
-11:49:21.041    ,-[[36;1;4m/vercel/path0/src/app/projects/[id]/page.tsx[0m:2:1]
-11:49:21.041  [2m2[0m | 
-11:49:21.041  [2m3[0m | 'use client';
-11:49:21.041  [2m4[0m | 
-11:49:21.041  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.042    : [31;1m                   ^^^^^^^^^[0m
-11:49:21.042  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.042  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.042  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.042    `----
-11:49:21.042 
-11:49:21.042   [31mx[0m You're importing a component that needs useParams. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.042   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.042   [31m|[0m 
-11:49:21.042   [31m|[0m 
-11:49:21.042    ,-[[36;1;4m/vercel/path0/src/app/projects/[id]/page.tsx[0m:3:1]
-11:49:21.042  [2m3[0m | 'use client';
-11:49:21.042  [2m4[0m | 
-11:49:21.042  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.042  [2m6[0m | import { useParams } from 'next/navigation';
-11:49:21.042    : [31;1m         ^^^^^^^^^[0m
-11:49:21.042  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.042  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.042  [2m9[0m | import { projects, notes, tasks } from '@/lib/db/schema';
-11:49:21.042    `----
-11:49:21.042 
-11:49:21.042 Import trace for requested module:
-11:49:21.042 ./src/app/projects/[id]/page.tsx
-11:49:21.042 
-11:49:21.042 ./src/app/tasks/[id]/page.tsx
-11:49:21.042 Error: 
-11:49:21.042   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
-11:49:21.043    ,-[[36;1;4m/vercel/path0/src/app/tasks/[id]/page.tsx[0m:1:1]
-11:49:21.043  [2m1[0m | export const dynamic = 'force-dynamic';
-11:49:21.043  [2m2[0m | 
-11:49:21.043  [2m3[0m | 'use client';
-11:49:21.043    : [31;1m^^^^^^^^^^^^^[0m
-11:49:21.043  [2m4[0m | 
-11:49:21.043  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.043  [2m6[0m | import { useParams, useRouter } from 'next/navigation';
-11:49:21.043    `----
-11:49:21.043 
-11:49:21.043   [31mx[0m You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.043   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.043   [31m|[0m 
-11:49:21.043   [31m|[0m 
-11:49:21.043    ,-[[36;1;4m/vercel/path0/src/app/tasks/[id]/page.tsx[0m:2:1]
-11:49:21.043  [2m2[0m | 
-11:49:21.043  [2m3[0m | 'use client';
-11:49:21.043  [2m4[0m | 
-11:49:21.043  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.043    : [31;1m         ^^^^^^^^[0m
-11:49:21.044  [2m6[0m | import { useParams, useRouter } from 'next/navigation';
-11:49:21.044  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.044  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.044    `----
-11:49:21.044 
-11:49:21.044   [31mx[0m You're importing a component that needs useEffect. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.044   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.044   [31m|[0m 
-11:49:21.044   [31m|[0m 
-11:49:21.044    ,-[[36;1;4m/vercel/path0/src/app/tasks/[id]/page.tsx[0m:2:1]
-11:49:21.044  [2m2[0m | 
-11:49:21.044  [2m3[0m | 'use client';
-11:49:21.044  [2m4[0m | 
-11:49:21.044  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.044    : [31;1m                   ^^^^^^^^^[0m
-11:49:21.044  [2m6[0m | import { useParams, useRouter } from 'next/navigation';
-11:49:21.044  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.044  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.044    `----
-11:49:21.044 
-11:49:21.044   [31mx[0m You're importing a component that needs useParams. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.044   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.044   [31m|[0m 
-11:49:21.045   [31m|[0m 
-11:49:21.045    ,-[[36;1;4m/vercel/path0/src/app/tasks/[id]/page.tsx[0m:3:1]
-11:49:21.045  [2m3[0m | 'use client';
-11:49:21.045  [2m4[0m | 
-11:49:21.045  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.045  [2m6[0m | import { useParams, useRouter } from 'next/navigation';
-11:49:21.045    : [31;1m         ^^^^^^^^^[0m
-11:49:21.046  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.046  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.046  [2m9[0m | import { tasks, projects } from '@/lib/db/schema';
-11:49:21.046    `----
-11:49:21.046 
-11:49:21.047   [31mx[0m You're importing a component that needs useRouter. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
-11:49:21.047   [31m|[0m Learn more: https://nextjs.org/docs/getting-started/react-essentials
-11:49:21.047   [31m|[0m 
-11:49:21.047   [31m|[0m 
-11:49:21.047    ,-[[36;1;4m/vercel/path0/src/app/tasks/[id]/page.tsx[0m:3:1]
-11:49:21.047  [2m3[0m | 'use client';
-11:49:21.047  [2m4[0m | 
-11:49:21.047  [2m5[0m | import { useState, useEffect } from 'react';
-11:49:21.047  [2m6[0m | import { useParams, useRouter } from 'next/navigation';
-11:49:21.047    : [31;1m                    ^^^^^^^^^[0m
-11:49:21.047  [2m7[0m | import { useUser } from '@clerk/nextjs';
-11:49:21.047  [2m8[0m | import { db } from '@/lib/db';
-11:49:21.047  [2m9[0m | import { tasks, projects } from '@/lib/db/schema';
-11:49:21.047    `----
-11:49:21.047 
-11:49:21.047 Import trace for requested module:
-11:49:21.047 ./src/app/tasks/[id]/page.tsx
-11:49:21.047 
-11:49:21.061 
-11:49:21.061 > Build failed because of webpack errors
-11:49:21.091 Error: Command "npm run build" exited with 1
+11:53:05.964 Running build in Portland, USA (West) – pdx1
+11:53:05.965 Build machine configuration: 2 cores, 8 GB
+11:53:06.071 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 13198c1)
+11:53:06.072 Previous build caches not available.
+11:53:06.513 Cloning completed: 442.000ms
+11:53:06.898 Running "vercel build"
+11:53:07.333 Vercel CLI 50.0.1
+11:53:07.496 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+11:53:07.684 Installing dependencies...
+11:53:11.810 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+11:53:12.471 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+11:53:12.574 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+11:53:13.914 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+11:53:13.937 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+11:53:13.958 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+11:53:13.960 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+11:53:17.206 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+11:53:22.660 npm warn deprecated next@14.2.33: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
+11:53:23.120 
+11:53:23.120 added 566 packages in 15s
+11:53:23.121 
+11:53:23.121 188 packages are looking for funding
+11:53:23.121   run `npm fund` for details
+11:53:23.188 Detected Next.js version: 14.2.33
+11:53:23.194 Running "npm run build"
+11:53:23.295 
+11:53:23.296 > notesphere@0.1.0 build
+11:53:23.296 > next build
+11:53:23.296 
+11:53:23.862 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+11:53:23.863 This information is used to shape Next.js' roadmap and prioritize features.
+11:53:23.864 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+11:53:23.864 https://nextjs.org/telemetry
+11:53:23.864 
+11:53:23.917   ▲ Next.js 14.2.33
+11:53:23.918   - Environments: .env.local
+11:53:23.918 
+11:53:23.936    Creating an optimized production build ...
+11:53:49.757  ✓ Compiled successfully
+11:53:49.758    Linting and checking validity of types ...
+11:53:55.828    Collecting page data ...
+11:53:57.618    Generating static pages (0/5) ...
+11:53:57.881    Generating static pages (1/5) 
+11:53:57.883    Generating static pages (2/5) 
+11:53:57.962    Generating static pages (3/5) 
+11:53:57.967 Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+11:53:57.968     at neon (/vercel/path0/.next/server/chunks/44.js:11:5869)
+11:53:57.968     at 6024 (/vercel/path0/.next/server/app/tasks/[id]/page.js:1:12169)
+11:53:57.968     at t (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:57.968     at 3256 (/vercel/path0/.next/server/app/calendar/page.js:1:3056)
+11:53:57.968     at Object.t [as require] (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:57.968     at require (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18839)
+11:53:57.968     at i (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:88296)
+11:53:57.968     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98819
+11:53:57.968     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98906
+11:53:57.968     at t (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:99109) {
+11:53:57.968   digest: '1907059091'
+11:53:57.969 }
+11:53:57.996 
+11:53:57.996 Error occurred prerendering page "/calendar". Read more: https://nextjs.org/docs/messages/prerender-error
+11:53:57.997 
+11:53:57.997 Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+11:53:57.997     at neon (/vercel/path0/.next/server/chunks/44.js:11:5869)
+11:53:57.997     at 6024 (/vercel/path0/.next/server/app/tasks/[id]/page.js:1:12169)
+11:53:57.997     at t (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:57.997     at 3256 (/vercel/path0/.next/server/app/calendar/page.js:1:3056)
+11:53:57.998     at Object.t [as require] (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:57.998     at require (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18839)
+11:53:57.998     at i (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:88296)
+11:53:57.998     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98819
+11:53:57.998     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98906
+11:53:57.998     at t (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:99109)
+11:53:58.017 Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+11:53:58.018     at neon (/vercel/path0/.next/server/chunks/44.js:11:5869)
+11:53:58.018     at 6024 (/vercel/path0/.next/server/app/tasks/[id]/page.js:1:12169)
+11:53:58.018     at t (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:58.019     at 2570 (/vercel/path0/.next/server/app/page.js:1:1840)
+11:53:58.019     at Object.t [as require] (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:58.019     at require (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18839)
+11:53:58.019     at i (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:88296)
+11:53:58.019     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98819
+11:53:58.019     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98906
+11:53:58.020     at t (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:99109) {
+11:53:58.020   digest: '3644752353'
+11:53:58.020 }
+11:53:58.030 
+11:53:58.031 Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+11:53:58.032 
+11:53:58.033 Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+11:53:58.033     at neon (/vercel/path0/.next/server/chunks/44.js:11:5869)
+11:53:58.033     at 6024 (/vercel/path0/.next/server/app/tasks/[id]/page.js:1:12169)
+11:53:58.033     at t (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:58.035     at 2570 (/vercel/path0/.next/server/app/page.js:1:1840)
+11:53:58.036     at Object.t [as require] (/vercel/path0/.next/server/webpack-runtime.js:1:128)
+11:53:58.036     at require (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:18839)
+11:53:58.036     at i (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:88296)
+11:53:58.036     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98819
+11:53:58.036     at /vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:98906
+11:53:58.037     at t (/vercel/path0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:99109)
+11:53:58.037  ✓ Generating static pages (5/5)
+11:53:58.039 
+11:53:58.042 > Export encountered errors on following paths:
+11:53:58.043 	/calendar/page: /calendar
+11:53:58.043 	/page: /
+11:53:58.077 Error: Command "npm run build" exited with 1
