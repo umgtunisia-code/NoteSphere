@@ -12,8 +12,8 @@ import { Progress } from '@/components/ui/progress';
 interface Project {
   id: string;
   name: string;
-  color: string;
-  createdAt: Date;
+  color: string | null;
+  createdAt: Date | null;
 }
 
 interface ProjectWithStats extends Project {
@@ -95,9 +95,9 @@ export const ProjectList = () => {
               <div key={project.id} className="pb-4 last:pb-0 border-b last:border-b-0">
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">{project.name}</h3>
-                  <Badge 
-                    variant="secondary" 
-                    style={{ backgroundColor: `${project.color}20`, color: project.color }}
+                  <Badge
+                    variant="secondary"
+                    style={{ backgroundColor: `${project.color || '#3B82F6'}20`, color: project.color || '#3B82F6' }}
                     className="text-xs"
                   >
                     {project.completedTasks}/{project.totalTasks} tasks
