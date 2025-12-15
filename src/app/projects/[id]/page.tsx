@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import { db } from '@/lib/db';
 import { projects, notes, tasks } from '@/lib/db/schema';
-import { eq, desc } from 'drizzle-orm';
+import { eq, desc, and } from 'drizzle-orm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -70,8 +70,7 @@ export default function ProjectDetailPage() {
         const completedTasksResult = await db
           .select({ count: { count: tasks.id } })
           .from(tasks)
-          .where(eq(tasks.projectId, projectData.id))
-          .where(eq(tasks.isCompleted, true));
+          .where(and(eq(tasks.projectId, projectData.id), eq(tasks.isCompleted, true)));
         
         const completedTasks = Number(completedTasksResult[0]?.count || 0);
 
