@@ -15,10 +15,10 @@ interface Task {
   title: string;
   description: string | null;
   dueAt: Date;
-  isCompleted: boolean;
+  isCompleted: boolean | null;
   projectId: string;
   projectName: string;
-  projectColor: string;
+  projectColor: string | null;
 }
 
 export const TaskList = () => {
@@ -108,8 +108,8 @@ export const TaskList = () => {
             {tasks.map((task) => (
               <div key={task.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <Checkbox
-                  checked={task.isCompleted}
-                  onCheckedChange={() => toggleTaskCompletion(task.id, task.isCompleted)}
+                  checked={!!task.isCompleted}
+                  onCheckedChange={() => toggleTaskCompletion(task.id, !!task.isCompleted)}
                   className="mt-0.5"
                 />
                 <div className="flex-1">
@@ -117,9 +117,9 @@ export const TaskList = () => {
                     <h3 className={`${task.isCompleted ? 'line-through text-muted-foreground' : ''}`}>
                       {task.title}
                     </h3>
-                    <Badge 
-                      variant="secondary" 
-                      style={{ backgroundColor: `${task.projectColor}20`, color: task.projectColor }}
+                    <Badge
+                      variant="secondary"
+                      style={{ backgroundColor: `${task.projectColor || '#3B82F6'}20`, color: task.projectColor || '#3B82F6' }}
                       className="text-xs"
                     >
                       {task.projectName}

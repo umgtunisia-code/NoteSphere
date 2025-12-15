@@ -17,11 +17,11 @@ interface Note {
   id: string;
   title: string | null;
   content: any;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date | null;
+  updatedAt: Date | null;
   projectId: string;
   projectName: string;
-  projectColor: string;
+  projectColor: string | null;
 }
 
 export default function NoteDetailPage() {
@@ -118,16 +118,16 @@ export default function NoteDetailPage() {
             </h1>
             <div className="flex items-center mt-2">
               <Link href={`/projects/${note.projectId}`}>
-                <Badge 
-                  variant="secondary" 
-                  style={{ backgroundColor: `${note.projectColor}20`, color: note.projectColor }}
+                <Badge
+                  variant="secondary"
+                  style={{ backgroundColor: `${note.projectColor || '#3B82F6'}20`, color: note.projectColor || '#3B82F6' }}
                   className="text-xs cursor-pointer"
                 >
                   {note.projectName}
                 </Badge>
               </Link>
               <span className="text-sm text-muted-foreground ml-2">
-                Last updated: {new Date(note.updatedAt).toLocaleString()}
+                Last updated: {note.updatedAt ? new Date(note.updatedAt).toLocaleString() : 'N/A'}
               </span>
             </div>
           </div>
