@@ -27,7 +27,7 @@ interface Task {
 
 export const TaskListByProject = ({ projectId }: Props) => {
   const { user } = useUser();
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [projectTasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const TaskListByProject = ({ projectId }: Props) => {
     const fetchTasks = async () => {
       try {
         // Get tasks for the project
-        const projectTasks = await db
+        const fetchedTasks = await db
           .select({
             id: tasks.id,
             title: tasks.title,
@@ -52,7 +52,7 @@ export const TaskListByProject = ({ projectId }: Props) => {
           .where(eq(tasks.projectId, projectId))
           .orderBy(desc(tasks.dueAt));
 
-        setTasks(projectTasks);
+        setTasks(fetchedTasks);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -94,11 +94,11 @@ export const TaskListByProject = ({ projectId }: Props) => {
         <CardTitle>Project Tasks</CardTitle>
       </CardHeader>
       <CardContent>
-        {tasks.length === 0 ? (
+        {projectTasks.length === 0 ? (
           <p className="text-muted-foreground">No tasks in this project yet.</p>
         ) : (
           <div className="space-y-4">
-            {tasks.map((task) => (
+            {projectTasks.map((task) => (
               <div key={task.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <Checkbox
                   checked={!!task.isCompleted}

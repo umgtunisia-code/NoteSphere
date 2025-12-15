@@ -23,7 +23,7 @@ interface Task {
 
 export const TaskList = () => {
   const { user } = useUser();
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [userTasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const TaskList = () => {
         const end = endOfDay(today);
 
         // Join tasks with projects to get project information
-        const userTasks = await db
+        const fetchedTasks = await db
           .select({
             id: tasks.id,
             title: tasks.title,
@@ -59,7 +59,7 @@ export const TaskList = () => {
           )
           .orderBy(desc(tasks.dueAt));
 
-        setTasks(userTasks);
+        setTasks(fetchedTasks);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -101,11 +101,11 @@ export const TaskList = () => {
         <CardTitle>Tasks Due Today</CardTitle>
       </CardHeader>
       <CardContent>
-        {tasks.length === 0 ? (
+        {userTasks.length === 0 ? (
           <p className="text-muted-foreground">No tasks due today.</p>
         ) : (
           <div className="space-y-4">
-            {tasks.map((task) => (
+            {userTasks.map((task) => (
               <div key={task.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <Checkbox
                   checked={!!task.isCompleted}

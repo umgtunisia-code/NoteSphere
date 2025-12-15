@@ -59,7 +59,7 @@ interface ProjectOption {
 export const TaskForm = ({ projectId, onClose }: TaskFormProps) => {
   const { user } = useUser();
   const [isLoading, setIsLoading] = useState(false);
-  const [projects, setProjects] = useState<ProjectOption[]>([]);
+  const [userProjects, setProjects] = useState<ProjectOption[]>([]);
   const [time, setTime] = useState<string>('09:00');
 
   useEffect(() => {
@@ -67,12 +67,12 @@ export const TaskForm = ({ projectId, onClose }: TaskFormProps) => {
 
     const fetchProjects = async () => {
       try {
-        const userProjects = await db
+        const fetchedProjects = await db
           .select()
           .from(projects)
           .where(eq(projects.userId, user.id));
 
-        setProjects(userProjects.map(p => ({
+        setProjects(fetchedProjects.map(p => ({
           id: p.id,
           name: p.name,
           color: p.color || '#3B82F6'
@@ -170,7 +170,7 @@ export const TaskForm = ({ projectId, onClose }: TaskFormProps) => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {projects.map((project) => (
+                  {userProjects.map((project) => (
                     <SelectItem key={project.id} value={project.id}>
                       <span className="flex items-center">
                         <span 
