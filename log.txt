@@ -1,54 +1,54 @@
-10:19:33.534 Running build in Portland, USA (West) – pdx1
-10:19:33.535 Build machine configuration: 2 cores, 8 GB
-10:19:33.828 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 63c4d63)
-10:19:33.829 Previous build caches not available.
-10:19:34.540 Cloning completed: 712.000ms
-10:19:35.494 Running "vercel build"
-10:19:36.271 Vercel CLI 50.0.1
-10:19:36.628 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-10:19:37.138 Installing dependencies...
-10:19:44.829 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-10:19:45.588 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-10:19:45.689 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-10:19:47.157 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-10:19:47.158 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
-10:19:47.183 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
-10:19:47.201 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-10:19:53.184 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-10:20:13.153 npm warn deprecated next@14.2.25: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
-10:20:14.267 
-10:20:14.268 added 565 packages in 37s
-10:20:14.269 
-10:20:14.270 188 packages are looking for funding
-10:20:14.271   run `npm fund` for details
-10:20:14.428 Detected Next.js version: 14.2.25
-10:20:14.451 Running "npm run build"
-10:20:14.684 
-10:20:14.684 > notesphere@0.1.0 build
-10:20:14.684 > next build
-10:20:14.684 
-10:20:16.045 Attention: Next.js now collects completely anonymous telemetry regarding usage.
-10:20:16.045 This information is used to shape Next.js' roadmap and prioritize features.
-10:20:16.045 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-10:20:16.045 https://nextjs.org/telemetry
-10:20:16.045 
-10:20:16.182   ▲ Next.js 14.2.25
-10:20:16.183   - Environments: .env.local
-10:20:16.184 
-10:20:16.219    Creating an optimized production build ...
-10:20:48.598  ✓ Compiled successfully
-10:20:48.599    Linting and checking validity of types ...
-10:20:53.977 Failed to compile.
-10:20:53.978 
-10:20:53.979 ./src/components/notes/note-form.tsx:61:18
-10:20:53.979 Type error: Cannot find name 'eq'.
-10:20:53.980 
-10:20:53.981 [0m [90m 59 |[39m             updatedAt[33m:[39m [36mnew[39m [33mDate[39m()[0m
-10:20:53.981 [0m [90m 60 |[39m           })[0m
-10:20:53.981 [0m[31m[1m>[22m[39m[90m 61 |[39m           [33m.[39mwhere(eq(notes[33m.[39mid[33m,[39m noteId))[33m;[39m[0m
-10:20:53.981 [0m [90m    |[39m                  [31m[1m^[22m[39m[0m
-10:20:53.981 [0m [90m 62 |[39m       } [36melse[39m {[0m
-10:20:53.982 [0m [90m 63 |[39m         [90m// Create new note[39m[0m
-10:20:53.982 [0m [90m 64 |[39m         [36mawait[39m db[33m.[39minsert(notes)[33m.[39mvalues({[0m
-10:20:54.011 Next.js build worker exited with code: 1 and signal: null
-10:20:54.030 Error: Command "npm run build" exited with 1
+10:40:41.918 Running build in Portland, USA (West) – pdx1
+10:40:41.918 Build machine configuration: 2 cores, 8 GB
+10:40:42.049 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 113179f)
+10:40:42.050 Previous build caches not available.
+10:40:42.468 Cloning completed: 419.000ms
+10:40:42.886 Running "vercel build"
+10:40:43.309 Vercel CLI 50.0.1
+10:40:43.464 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+10:40:43.605 Installing dependencies...
+10:40:48.588 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+10:40:49.240 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+10:40:49.322 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+10:40:50.282 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+10:40:50.312 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+10:40:50.327 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+10:40:50.328 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+10:40:53.248 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+10:40:57.688 npm warn deprecated next@14.2.26: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
+10:40:58.157 
+10:40:58.158 added 565 packages in 14s
+10:40:58.158 
+10:40:58.158 188 packages are looking for funding
+10:40:58.158   run `npm fund` for details
+10:40:58.205 Detected Next.js version: 14.2.26
+10:40:58.211 Running "npm run build"
+10:40:58.313 
+10:40:58.313 > notesphere@0.1.0 build
+10:40:58.313 > next build
+10:40:58.313 
+10:40:58.889 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+10:40:58.890 This information is used to shape Next.js' roadmap and prioritize features.
+10:40:58.890 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+10:40:58.891 https://nextjs.org/telemetry
+10:40:58.891 
+10:40:58.943   ▲ Next.js 14.2.26
+10:40:58.944   - Environments: .env.local
+10:40:58.944 
+10:40:58.961    Creating an optimized production build ...
+10:41:23.977  ✓ Compiled successfully
+10:41:23.978    Linting and checking validity of types ...
+10:41:29.796 Failed to compile.
+10:41:29.796 
+10:41:29.797 ./src/components/notes/note-list.tsx:36:17
+10:41:29.797 Type error: Argument of type 'Note[]' is not assignable to parameter of type 'SQL<unknown> | PgTable<TableConfig> | Subquery<string, Record<string, unknown>> | PgViewBase<string, boolean, ColumnsSelection>'.
+10:41:29.797 
+10:41:29.797 [0m [90m 34 |[39m         [36mconst[39m userNotes [33m=[39m [36mawait[39m db[0m
+10:41:29.797 [0m [90m 35 |[39m           [33m.[39mselect()[0m
+10:41:29.798 [0m[31m[1m>[22m[39m[90m 36 |[39m           [33m.[39m[36mfrom[39m(notes)[0m
+10:41:29.798 [0m [90m    |[39m                 [31m[1m^[22m[39m[0m
+10:41:29.798 [0m [90m 37 |[39m           [33m.[39mwhere(eq(notes[33m.[39mprojectId[33m,[39m projectId))[0m
+10:41:29.798 [0m [90m 38 |[39m           [33m.[39morderBy(desc(notes[33m.[39mupdatedAt))[33m;[39m[0m
+10:41:29.798 [0m [90m 39 |[39m[0m
+10:41:29.826 Next.js build worker exited with code: 1 and signal: null
+10:41:29.846 Error: Command "npm run build" exited with 1

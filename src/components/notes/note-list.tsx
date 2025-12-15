@@ -17,13 +17,13 @@ interface Note {
   id: string;
   title: string | null;
   content: any;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
 
 export const NoteList = ({ projectId }: Props) => {
   const { user } = useUser();
-  const [notes, setNotes] = useState<Note[]>([]);
+  const [userNotes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,13 +31,13 @@ export const NoteList = ({ projectId }: Props) => {
 
     const fetchNotes = async () => {
       try {
-        const userNotes = await db
+        const fetchedNotes = await db
           .select()
           .from(notes)
           .where(eq(notes.projectId, projectId))
           .orderBy(desc(notes.updatedAt));
 
-        setNotes(userNotes);
+        setNotes(fetchedNotes);
       } catch (error) {
         console.error('Error fetching notes:', error);
       } finally {
@@ -58,11 +58,11 @@ export const NoteList = ({ projectId }: Props) => {
         <CardTitle>Notes</CardTitle>
       </CardHeader>
       <CardContent>
-        {notes.length === 0 ? (
+        {userNotes.length === 0 ? (
           <p className="text-muted-foreground">No notes yet. Create your first note!</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {notes.map((note) => (
+            {userNotes.map((note) => (
               <Card key={note.id} className="hover:shadow-md transition-shadow">
                 <CardHeader>
                   <CardTitle className="text-lg">
@@ -81,7 +81,7 @@ export const NoteList = ({ projectId }: Props) => {
                     </Button>
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Last updated: {new Date(note.updatedAt).toLocaleDateString()}
+                    Last updated: {note.updatedAt ? new Date(note.updatedAt).toLocaleDateString() : 'N/A'}
                   </p>
                 </CardContent>
               </Card>
