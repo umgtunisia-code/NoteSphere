@@ -19,12 +19,12 @@ interface Task {
   title: string;
   description: string | null;
   dueAt: Date;
-  isCompleted: boolean;
+  isCompleted: boolean | null;
   projectId: string;
   projectName: string;
-  projectColor: string;
-  createdAt: Date;
-  updatedAt: Date;
+  projectColor: string | null;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
 
 export default function TaskDetailPage() {
@@ -74,8 +74,8 @@ export default function TaskDetailPage() {
     if (!user || !task) return;
 
     try {
-      const newStatus = !task.isCompleted;
-      
+      const newStatus = !(task.isCompleted ?? false);
+
       await db
         .update(tasks)
         .set({ isCompleted: newStatus })
@@ -111,7 +111,7 @@ export default function TaskDetailPage() {
           <div>
             <div className="flex items-center space-x-3">
               <Checkbox
-                checked={task.isCompleted}
+                checked={!!task.isCompleted}
                 onCheckedChange={toggleTaskCompletion}
                 className="mt-0.5"
               />
@@ -122,9 +122,9 @@ export default function TaskDetailPage() {
             
             <div className="flex items-center mt-3 space-x-3">
               <Link href={`/projects/${task.projectId}`}>
-                <Badge 
-                  variant="secondary" 
-                  style={{ backgroundColor: `${task.projectColor}20`, color: task.projectColor }}
+                <Badge
+                  variant="secondary"
+                  style={{ backgroundColor: `${task.projectColor || '#3B82F6'}20`, color: task.projectColor || '#3B82F6' }}
                   className="text-xs cursor-pointer"
                 >
                   {task.projectName}
@@ -137,7 +137,7 @@ export default function TaskDetailPage() {
               </div>
               
               <span className="text-sm text-muted-foreground">
-                Created: {format(new Date(task.createdAt), 'MMM d, yyyy')}
+                Created: {task.createdAt ? format(new Date(task.createdAt), 'MMM d, yyyy') : 'N/A'}
               </span>
             </div>
           </div>
