@@ -21,8 +21,8 @@ import { TaskForm } from '@/components/tasks/task-form';
 interface Project {
   id: string;
   name: string;
-  color: string;
-  createdAt: Date;
+  color: string | null;
+  createdAt: Date | null;
 }
 
 interface ProjectWithStats extends Project {
@@ -108,19 +108,19 @@ export default function ProjectDetailPage() {
     <div className="container mx-auto py-8 px-4">
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h1 className="text-3xl font-bold" style={{ color: project.color }}>
+          <h1 className="text-3xl font-bold" style={{ color: project.color || '#3B82F6' }}>
             {project.name}
           </h1>
           <div className="flex items-center mt-2">
-            <Badge 
-              variant="secondary" 
-              style={{ backgroundColor: `${project.color}20`, color: project.color }}
+            <Badge
+              variant="secondary"
+              style={{ backgroundColor: `${project.color || '#3B82F6'}20`, color: project.color || '#3B82F6' }}
               className="mr-2"
             >
               {project.completedTasks}/{project.totalTasks} tasks
             </Badge>
             <span className="text-sm text-muted-foreground">
-              Created: {new Date(project.createdAt).toLocaleDateString()}
+              Created: {project.createdAt ? new Date(project.createdAt).toLocaleDateString() : 'N/A'}
             </span>
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function ProjectDetailPage() {
           <span>Project Progress</span>
           <span>{progress}%</span>
         </div>
-        <Progress value={progress} className="h-3" style={{ '--progress-color': project.color } as React.CSSProperties} />
+        <Progress value={progress} className="h-3" style={{ '--progress-color': project.color || '#3B82F6' } as React.CSSProperties} />
       </div>
       
       <Tabs defaultValue="notes" className="w-full">
