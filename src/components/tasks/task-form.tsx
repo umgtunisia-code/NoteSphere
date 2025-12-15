@@ -219,7 +219,7 @@ export const TaskForm = ({ projectId, onClose }: TaskFormProps) => {
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
-                      disabled={(date) => date < new Date().setHours(0, 0, 0, 0)}
+                      disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
                       initialFocus
                     />
                   </PopoverContent>
