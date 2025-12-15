@@ -39,7 +39,15 @@ export const ProjectList = () => {
 
         // Calculate stats for each project
         const projectsWithStatsData = await Promise.all(
-          userProjects.map(async (project) => {
+          userProjects.map(async (project: {
+            id: string;
+            userId: string;
+            name: string;
+            color: string | null;
+            isArchived: boolean | null;
+            createdAt: Date | null;
+            updatedAt: Date | null;
+          }) => {
             // Get total tasks count
             const totalTasksResult = await db
               .select({ count: { count: tasks.id } })
