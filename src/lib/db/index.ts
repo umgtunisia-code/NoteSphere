@@ -3,20 +3,28 @@ import { drizzle } from 'drizzle-orm/neon-http';
 
 let dbInstance: any = null;
 
-// Only initialize database if DATABASE_URL is available to prevent build errors
-if (typeof process !== 'undefined' && process.env?.DATABASE_URL) {
-  try {
+// Function to initialize the database connection when first needed
+function getDb() {
+  if (!dbInstance) {
+    if (!process.env.DATABASE_URL) {
+      throw new Error('DATABASE_URL is not configured. Please set the database connection string in your environment variables.');
+    }
     const sql = neon(process.env.DATABASE_URL);
     dbInstance = drizzle(sql);
-  } catch (error) {
-    console.error('Failed to initialize database connection:', error);
-    // This might happen during build time, which is okay for dynamic pages
   }
-} else {
-  // During build time or if DATABASE_URL is not set, we'll have dbInstance as null
-  // The actual database calls will handle this error when executed in runtime
-  // if the environment variable is still missing
+  return dbInstance;
 }
 
-// Export db - it will be available at runtime when DATABASE_URL is set
-export const db = dbInstance;
+// Export methods that will initialize the db when first called
+export const db = {
+  select: (...args: any[]) => getDb().select(...args),
+  selectDistinct: (...args: any[]) => getDb().selectDistinct(...args),
+  insert: (...args: any[]) => getDb().insert(...args),
+  update: (table: any) => getDb().update(table),
+  del: (table: any) => getDb().delete(table), // drizzle uses 'delete' but it's reserved in JS, so 'del' is typically used
+  delete: (table: any) => getDb().delete(table),
+  from: (table: any) => getDb().from(table),
+  query: (tableName: any) => getDb().query[tableName],
+  $with: (alias: any) => getDb().with(alias),
+  transaction: (...args: any[]) => getDb().transaction(...args),
+};
