@@ -1,53 +1,26 @@
-14:04:20.870 Running build in Portland, USA (West) – pdx1
-14:04:20.871 Build machine configuration: 2 cores, 8 GB
-14:04:20.988 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 34ea35a)
-14:04:20.989 Previous build caches not available.
-14:04:21.464 Cloning completed: 476.000ms
-14:04:21.864 Running "vercel build"
-14:04:22.308 Vercel CLI 50.0.1
-14:04:22.477 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-14:04:22.647 Installing dependencies...
-14:04:25.758 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-14:04:26.360 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-14:04:26.497 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-14:04:27.828 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-14:04:27.853 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
-14:04:27.874 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
-14:04:27.897 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-14:04:31.380 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-14:04:37.465 
-14:04:37.466 added 566 packages in 15s
-14:04:37.466 
-14:04:37.466 188 packages are looking for funding
-14:04:37.467   run `npm fund` for details
-14:04:37.535 Detected Next.js version: 14.2.35
-14:04:37.541 Running "npm run build"
-14:04:37.690 
-14:04:37.705 > notesphere@0.1.0 build
-14:04:37.706 > next build
-14:04:37.706 
-14:04:38.297 Attention: Next.js now collects completely anonymous telemetry regarding usage.
-14:04:38.298 This information is used to shape Next.js' roadmap and prioritize features.
-14:04:38.298 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-14:04:38.298 https://nextjs.org/telemetry
-14:04:38.298 
-14:04:38.440   ▲ Next.js 14.2.35
-14:04:38.441   - Environments: .env.local
-14:04:38.442 
-14:04:38.462    Creating an optimized production build ...
-14:05:06.529  ✓ Compiled successfully
-14:05:06.532    Linting and checking validity of types ...
-14:05:13.068 Failed to compile.
-14:05:13.069 
-14:05:13.069 ./src/components/tasks/task-form.tsx:75:41
-14:05:13.069 Type error: Parameter 'p' implicitly has an 'any' type.
-14:05:13.069 
-14:05:13.069 [0m [90m 73 |[39m           [33m.[39mwhere(eq(projects[33m.[39muserId[33m,[39m user[33m.[39mid))[33m;[39m[0m
-14:05:13.069 [0m [90m 74 |[39m[0m
-14:05:13.069 [0m[31m[1m>[22m[39m[90m 75 |[39m         setProjects(fetchedProjects[33m.[39mmap(p [33m=>[39m ({[0m
-14:05:13.069 [0m [90m    |[39m                                         [31m[1m^[22m[39m[0m
-14:05:13.070 [0m [90m 76 |[39m           id[33m:[39m p[33m.[39mid[33m,[39m[0m
-14:05:13.070 [0m [90m 77 |[39m           name[33m:[39m p[33m.[39mname[33m,[39m[0m
-14:05:13.070 [0m [90m 78 |[39m           color[33m:[39m p[33m.[39mcolor [33m||[39m [32m'#3B82F6'[39m[0m
-14:05:13.102 Next.js build worker exited with code: 1 and signal: null
-14:05:13.125 Error: Command "npm run build" exited with 1
+11:12:41.422 Running build in Portland, USA (West) – pdx1
+11:12:41.423 Build machine configuration: 2 cores, 8 GB
+11:12:41.919 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 09f5984)
+11:12:41.920 Previous build caches not available.
+11:12:42.703 Cloning completed: 784.000ms
+11:12:44.040 Running "vercel build"
+11:12:44.490 Vercel CLI 50.0.1
+11:12:44.636 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+11:12:44.817 Installing dependencies...
+11:12:46.633 npm warn ERESOLVE overriding peer dependency
+11:12:46.635 npm warn While resolving: notesphere@0.1.0
+11:12:46.635 npm warn Found: next@14.2.35
+11:12:46.636 npm warn node_modules/next
+11:12:46.636 npm warn   next@"14.2.36" from the root project
+11:12:46.636 npm warn   1 more (@clerk/nextjs)
+11:12:46.636 npm warn
+11:12:46.636 npm warn Could not resolve dependency:
+11:12:46.636 npm warn peer next@"^13.5.4 || ^14.0.3 || >=15.0.0-rc" from @clerk/nextjs@5.7.5
+11:12:46.636 npm warn node_modules/@clerk/nextjs
+11:12:46.636 npm warn   @clerk/nextjs@"^5.7.2" from the root project
+11:12:46.652 npm error code ETARGET
+11:12:46.652 npm error notarget No matching version found for eslint-config-next@^14.2.36.
+11:12:46.652 npm error notarget In most cases you or one of your dependencies are requesting
+11:12:46.653 npm error notarget a package version that doesn't exist.
+11:12:46.654 npm error A complete log of this run can be found in: /vercel/.npm/_logs/2025-12-16T10_12_45_071Z-debug-0.log
+11:12:46.691 Error: Command "npm install" exited with 1
