@@ -3,7 +3,7 @@
 export const dynamic = 'force-dynamic';
 
 import { useUser } from '@clerk/nextjs';
-import { redirect } from 'next/navigation';
+import { RedirectToSignIn, SignedOut } from '@clerk/nextjs';
 import { Dashboard } from '@/components/dashboard';
 
 export default function HomePage() {
@@ -14,7 +14,11 @@ export default function HomePage() {
   }
 
   if (!isSignedIn) {
-    redirect('/sign-in');
+    return (
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    );
   }
 
   return <Dashboard />;

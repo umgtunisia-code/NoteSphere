@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { ProjectList } from '@/components/projects/project-list';
 import { TaskList } from '@/components/tasks/task-list';
@@ -10,11 +10,15 @@ import { ProjectForm } from '@/components/projects/project-form';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 export const Dashboard = () => {
-  const { user } = useUser();
+  const { user, isLoaded, isSignedIn } = useUser();
   const [showProjectModal, setShowProjectModal] = useState(false);
 
-  if (!user) {
+  if (!isLoaded) {
     return <div>Loading...</div>;
+  }
+
+  if (!isSignedIn) {
+    return <div>Please sign in to continue.</div>;
   }
 
   return (
