@@ -72,7 +72,15 @@ export const TaskForm = ({ projectId, onClose }: TaskFormProps) => {
           .from(projects)
           .where(eq(projects.userId, user.id));
 
-        setProjects(fetchedProjects.map(p => ({
+        setProjects(fetchedProjects.map((p: {
+          id: string;
+          userId: string;
+          name: string;
+          color: string | null;
+          isArchived: boolean | null;
+          createdAt: Date | null;
+          updatedAt: Date | null;
+        }) => ({
           id: p.id,
           name: p.name,
           color: p.color || '#3B82F6'
