@@ -1,75 +1,62 @@
-11:25:42.457 Running build in Portland, USA (West) – pdx1
-11:25:42.458 Build machine configuration: 2 cores, 8 GB
-11:25:42.566 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 2cce0ca)
-11:25:42.567 Previous build caches not available.
-11:25:42.994 Cloning completed: 428.000ms
-11:25:43.390 Running "vercel build"
-11:25:43.815 Vercel CLI 50.0.1
-11:25:43.962 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-11:25:44.114 Installing dependencies...
-11:25:46.492 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-11:25:47.075 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-11:25:47.169 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
-11:25:48.289 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
-11:25:48.291 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
-11:25:48.312 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
-11:25:48.331 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
-11:25:51.289 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
-11:25:57.047 
-11:25:57.048 added 566 packages in 13s
-11:25:57.048 
-11:25:57.049 188 packages are looking for funding
-11:25:57.049   run `npm fund` for details
-11:25:57.106 Detected Next.js version: 14.2.35
-11:25:57.111 Running "npm run build"
-11:25:57.203 
-11:25:57.203 > notesphere@0.1.0 build
-11:25:57.203 > next build
-11:25:57.204 
-11:25:57.681 Attention: Next.js now collects completely anonymous telemetry regarding usage.
-11:25:57.682 This information is used to shape Next.js' roadmap and prioritize features.
-11:25:57.683 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-11:25:57.683 https://nextjs.org/telemetry
-11:25:57.683 
-11:25:57.728   ▲ Next.js 14.2.35
-11:25:57.728   - Environments: .env.local
-11:25:57.729 
-11:25:57.744    Creating an optimized production build ...
-11:26:19.283  ✓ Compiled successfully
-11:26:19.284    Linting and checking validity of types ...
-11:26:24.645    Collecting page data ...
-11:26:26.222    Generating static pages (0/5) ...
-11:26:26.426    Generating static pages (1/5) 
-11:26:26.428    Generating static pages (2/5) 
-11:26:26.481    Generating static pages (3/5) 
-11:26:26.603  ✓ Generating static pages (5/5)
-11:26:26.812    Finalizing page optimization ...
-11:26:26.813    Collecting build traces ...
-11:26:31.357 
-11:26:31.366 Route (app)                              Size     First Load JS
-11:26:31.367 ┌ ƒ /                                    11.5 kB         243 kB
-11:26:31.367 ├ ƒ /_not-found                          873 B          88.2 kB
-11:26:31.367 ├ ƒ /calendar                            3.92 kB         189 kB
-11:26:31.367 ├ ƒ /notes/[id]                          1.36 kB         358 kB
-11:26:31.367 ├ ƒ /projects/[id]                       8.36 kB         356 kB
-11:26:31.367 ├ ƒ /sign-in/[[...sign-in]]              196 B           115 kB
-11:26:31.367 ├ ƒ /sign-up/[[...sign-up]]              196 B           115 kB
-11:26:31.367 └ ƒ /tasks/[id]                          4.52 kB         202 kB
-11:26:31.367 + First Load JS shared by all            87.3 kB
-11:26:31.368   ├ chunks/117-80bb1d47d238d802.js       31.7 kB
-11:26:31.368   ├ chunks/fd9d1056-46cbeed89bb3f867.js  53.6 kB
-11:26:31.368   └ other shared chunks (total)          1.96 kB
-11:26:31.368 
-11:26:31.368 
-11:26:31.368 ƒ  (Dynamic)  server-rendered on demand
-11:26:31.368 
-11:26:31.458 Traced Next.js server files in: 31.241ms
-11:26:31.554 Created all serverless functions in: 95.982ms
-11:26:31.564 Collected static files (public/, static/, .next/static): 7.108ms
-11:26:31.620 Build Completed in /vercel/output [48s]
-11:26:31.785 Deploying outputs...
-11:26:37.322 Deployment completed
-11:26:38.216 Creating build cache...
-11:26:51.507 Created build cache: 13.291s
-11:26:51.508 Uploading build cache [167.32 MB]
-11:26:54.091 Build cache uploaded: 2.583s
+20:06:25.908 Running build in Portland, USA (West) – pdx1
+20:06:25.909 Build machine configuration: 2 cores, 8 GB
+20:06:26.022 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 4182d5f)
+20:06:26.622 Cloning completed: 600.000ms
+20:06:27.317 Restored build cache from previous deployment (GawBF2PMdGNAxqPKyACrpmrGjk7K)
+20:06:28.016 Running "vercel build"
+20:06:28.416 Vercel CLI 50.0.1
+20:06:28.566 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+20:06:28.709 Installing dependencies...
+20:06:29.858 
+20:06:29.859 up to date in 942ms
+20:06:29.859 
+20:06:29.859 188 packages are looking for funding
+20:06:29.859   run `npm fund` for details
+20:06:29.888 Detected Next.js version: 14.2.35
+20:06:29.893 Running "npm run build"
+20:06:29.986 
+20:06:29.986 > notesphere@0.1.0 build
+20:06:29.986 > next build
+20:06:29.986 
+20:06:30.609   ▲ Next.js 14.2.35
+20:06:30.611   - Environments: .env.local
+20:06:30.611 
+20:06:30.627    Creating an optimized production build ...
+20:06:42.610  ✓ Compiled successfully
+20:06:42.611    Linting and checking validity of types ...
+20:06:48.458    Collecting page data ...
+20:06:50.111    Generating static pages (0/5) ...
+20:06:50.343    Generating static pages (1/5) 
+20:06:50.344    Generating static pages (2/5) 
+20:06:50.399    Generating static pages (3/5) 
+20:06:50.422  ✓ Generating static pages (5/5)
+20:06:50.515    Finalizing page optimization ...
+20:06:50.515    Collecting build traces ...
+20:06:55.346 
+20:06:55.356 Route (app)                              Size     First Load JS
+20:06:55.356 ┌ ƒ /                                    11.5 kB         243 kB
+20:06:55.357 ├ ƒ /_not-found                          873 B          88.2 kB
+20:06:55.357 ├ ƒ /calendar                            3.92 kB         189 kB
+20:06:55.357 ├ ƒ /notes/[id]                          1.36 kB         358 kB
+20:06:55.357 ├ ƒ /projects/[id]                       8.36 kB         356 kB
+20:06:55.357 ├ ƒ /sign-in/[[...sign-in]]              196 B           115 kB
+20:06:55.358 ├ ƒ /sign-up/[[...sign-up]]              196 B           115 kB
+20:06:55.358 └ ƒ /tasks/[id]                          4.59 kB         202 kB
+20:06:55.358 + First Load JS shared by all            87.3 kB
+20:06:55.358   ├ chunks/117-80bb1d47d238d802.js       31.7 kB
+20:06:55.358   ├ chunks/fd9d1056-46cbeed89bb3f867.js  53.6 kB
+20:06:55.358   └ other shared chunks (total)          1.96 kB
+20:06:55.359 
+20:06:55.362 
+20:06:55.362 ƒ  (Dynamic)  server-rendered on demand
+20:06:55.362 
+20:06:55.455 Traced Next.js server files in: 34.339ms
+20:06:55.553 Created all serverless functions in: 97.736ms
+20:06:55.565 Collected static files (public/, static/, .next/static): 8.858ms
+20:06:55.619 Build Completed in /vercel/output [27s]
+20:06:55.796 Deploying outputs...
+20:07:01.904 Deployment completed
+20:07:02.809 Creating build cache...
+20:07:17.938 Created build cache: 15.123s
+20:07:17.938 Uploading build cache [170.67 MB]
+20:07:20.078 Build cache uploaded: 2.144s
