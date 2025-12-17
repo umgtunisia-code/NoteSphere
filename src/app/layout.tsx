@@ -17,7 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{
+      variables: {
+        colorPrimary: '#3b82f6', // Blue color matching your theme
+      }
+    }}>
       <html lang="en">
         <body className={inter.className}>
           <Providers>{children}</Providers>
