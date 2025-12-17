@@ -7,19 +7,35 @@ import { RedirectToSignIn, SignedOut } from '@clerk/nextjs';
 import { Dashboard } from '@/components/dashboard';
 
 export default function HomePage() {
-  const { isSignedIn, isLoaded } = useUser();
+  const { isSignedIn, isLoaded, user } = useUser();
 
-  // During loading, render nothing (or a spinner if you prefer)
+  // Debug logging
+  console.log('HomePage - isLoaded:', isLoaded, 'isSignedIn:', isSignedIn, 'user:', user);
+
   if (!isLoaded) {
-    return <div className="flex items-center justify-center h-screen">Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+          <p className="mt-4 text-lg">Loading application...</p>
+          <p className="text-sm text-gray-500">If this takes too long, check your Clerk configuration</p>
+        </div>
+      </div>
+    );
   }
 
   // If user is not signed in, redirect to sign-in
   if (!isSignedIn) {
+    // This will only render when user is definitely signed out
     return (
-      <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-center">
+          <p>You are not signed in. Redirecting to sign-in...</p>
+          <SignedOut>
+            <RedirectToSignIn />
+          </SignedOut>
+        </div>
+      </div>
     );
   }
 
