@@ -1,62 +1,62 @@
-20:06:25.908 Running build in Portland, USA (West) – pdx1
-20:06:25.909 Build machine configuration: 2 cores, 8 GB
-20:06:26.022 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: 4182d5f)
-20:06:26.622 Cloning completed: 600.000ms
-20:06:27.317 Restored build cache from previous deployment (GawBF2PMdGNAxqPKyACrpmrGjk7K)
-20:06:28.016 Running "vercel build"
-20:06:28.416 Vercel CLI 50.0.1
-20:06:28.566 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
-20:06:28.709 Installing dependencies...
-20:06:29.858 
-20:06:29.859 up to date in 942ms
-20:06:29.859 
-20:06:29.859 188 packages are looking for funding
-20:06:29.859   run `npm fund` for details
-20:06:29.888 Detected Next.js version: 14.2.35
-20:06:29.893 Running "npm run build"
-20:06:29.986 
-20:06:29.986 > notesphere@0.1.0 build
-20:06:29.986 > next build
-20:06:29.986 
-20:06:30.609   ▲ Next.js 14.2.35
-20:06:30.611   - Environments: .env.local
-20:06:30.611 
-20:06:30.627    Creating an optimized production build ...
-20:06:42.610  ✓ Compiled successfully
-20:06:42.611    Linting and checking validity of types ...
-20:06:48.458    Collecting page data ...
-20:06:50.111    Generating static pages (0/5) ...
-20:06:50.343    Generating static pages (1/5) 
-20:06:50.344    Generating static pages (2/5) 
-20:06:50.399    Generating static pages (3/5) 
-20:06:50.422  ✓ Generating static pages (5/5)
-20:06:50.515    Finalizing page optimization ...
-20:06:50.515    Collecting build traces ...
-20:06:55.346 
-20:06:55.356 Route (app)                              Size     First Load JS
-20:06:55.356 ┌ ƒ /                                    11.5 kB         243 kB
-20:06:55.357 ├ ƒ /_not-found                          873 B          88.2 kB
-20:06:55.357 ├ ƒ /calendar                            3.92 kB         189 kB
-20:06:55.357 ├ ƒ /notes/[id]                          1.36 kB         358 kB
-20:06:55.357 ├ ƒ /projects/[id]                       8.36 kB         356 kB
-20:06:55.357 ├ ƒ /sign-in/[[...sign-in]]              196 B           115 kB
-20:06:55.358 ├ ƒ /sign-up/[[...sign-up]]              196 B           115 kB
-20:06:55.358 └ ƒ /tasks/[id]                          4.59 kB         202 kB
-20:06:55.358 + First Load JS shared by all            87.3 kB
-20:06:55.358   ├ chunks/117-80bb1d47d238d802.js       31.7 kB
-20:06:55.358   ├ chunks/fd9d1056-46cbeed89bb3f867.js  53.6 kB
-20:06:55.358   └ other shared chunks (total)          1.96 kB
-20:06:55.359 
-20:06:55.362 
-20:06:55.362 ƒ  (Dynamic)  server-rendered on demand
-20:06:55.362 
-20:06:55.455 Traced Next.js server files in: 34.339ms
-20:06:55.553 Created all serverless functions in: 97.736ms
-20:06:55.565 Collected static files (public/, static/, .next/static): 8.858ms
-20:06:55.619 Build Completed in /vercel/output [27s]
-20:06:55.796 Deploying outputs...
-20:07:01.904 Deployment completed
-20:07:02.809 Creating build cache...
-20:07:17.938 Created build cache: 15.123s
-20:07:17.938 Uploading build cache [170.67 MB]
-20:07:20.078 Build cache uploaded: 2.144s
+20:15:57.383 Running build in Portland, USA (West) – pdx1
+20:15:57.383 Build machine configuration: 2 cores, 8 GB
+20:15:57.505 Cloning github.com/umgtunisia-code/NoteSphere (Branch: main, Commit: df02839)
+20:15:58.254 Cloning completed: 748.000ms
+20:15:58.436 Restored build cache from previous deployment (HTQfLkUGadxFbGPm7oTM2yaBv55s)
+20:15:59.089 Running "vercel build"
+20:15:59.498 Vercel CLI 50.0.1
+20:15:59.648 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+20:15:59.812 Installing dependencies...
+20:16:00.951 
+20:16:00.952 up to date in 941ms
+20:16:00.952 
+20:16:00.953 188 packages are looking for funding
+20:16:00.953   run `npm fund` for details
+20:16:00.981 Detected Next.js version: 14.2.35
+20:16:00.985 Running "npm run build"
+20:16:01.078 
+20:16:01.078 > notesphere@0.1.0 build
+20:16:01.079 > next build
+20:16:01.079 
+20:16:01.701   ▲ Next.js 14.2.35
+20:16:01.702   - Environments: .env.local
+20:16:01.702 
+20:16:01.718    Creating an optimized production build ...
+20:16:12.886  ✓ Compiled successfully
+20:16:12.887    Linting and checking validity of types ...
+20:16:18.861    Collecting page data ...
+20:16:20.600    Generating static pages (0/5) ...
+20:16:20.871    Generating static pages (1/5) 
+20:16:20.872    Generating static pages (2/5) 
+20:16:20.920    Generating static pages (3/5) 
+20:16:21.001  ✓ Generating static pages (5/5)
+20:16:21.159    Finalizing page optimization ...
+20:16:21.160    Collecting build traces ...
+20:16:25.932 
+20:16:25.941 Route (app)                              Size     First Load JS
+20:16:25.942 ┌ ƒ /                                    23 kB           266 kB
+20:16:25.942 ├ ƒ /_not-found                          873 B          88.2 kB
+20:16:25.942 ├ ƒ /calendar                            3.92 kB         190 kB
+20:16:25.943 ├ ƒ /notes/[id]                          1.36 kB         359 kB
+20:16:25.943 ├ ƒ /projects/[id]                       8.36 kB         357 kB
+20:16:25.943 ├ ƒ /sign-in/[[...sign-in]]              1.65 kB         116 kB
+20:16:25.943 ├ ƒ /sign-up/[[...sign-up]]              1.65 kB         116 kB
+20:16:25.943 └ ƒ /tasks/[id]                          4.6 kB          203 kB
+20:16:25.943 + First Load JS shared by all            87.3 kB
+20:16:25.944   ├ chunks/117-80bb1d47d238d802.js       31.7 kB
+20:16:25.944   ├ chunks/fd9d1056-46cbeed89bb3f867.js  53.6 kB
+20:16:25.945   └ other shared chunks (total)          1.96 kB
+20:16:25.945 
+20:16:25.947 
+20:16:25.947 ƒ  (Dynamic)  server-rendered on demand
+20:16:25.947 
+20:16:26.040 Traced Next.js server files in: 32.407ms
+20:16:26.155 Created all serverless functions in: 115.077ms
+20:16:26.178 Collected static files (public/, static/, .next/static): 17.896ms
+20:16:26.232 Build Completed in /vercel/output [26s]
+20:16:26.400 Deploying outputs...
+20:16:32.112 Deployment completed
+20:16:33.035 Creating build cache...
+20:16:48.153 Created build cache: 15.115s
+20:16:48.153 Uploading build cache [170.67 MB]
+20:16:50.601 Build cache uploaded: 2.449s

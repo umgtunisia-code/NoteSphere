@@ -12,13 +12,25 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 export const Dashboard = () => {
   const { user, isLoaded, isSignedIn } = useUser();
   const [showProjectModal, setShowProjectModal] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div className="flex items-center justify-center h-screen">Loading...</div>;
   }
 
   if (!isSignedIn) {
-    return <div>Please sign in to continue.</div>;
+    return <div className="flex items-center justify-center h-screen">Please sign in to continue.</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto py-8 px-4">
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+          <strong className="font-bold">Error: </strong>
+          <span className="block sm:inline">{error}</span>
+        </div>
+      </div>
+    );
   }
 
   return (
