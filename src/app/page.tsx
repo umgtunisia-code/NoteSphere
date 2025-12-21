@@ -3,14 +3,10 @@
 export const dynamic = 'force-dynamic';
 
 import { useUser } from '@clerk/nextjs';
-import { RedirectToSignIn, SignedOut } from '@clerk/nextjs';
 import { Dashboard } from '@/components/dashboard';
 
 export default function HomePage() {
-  const { isSignedIn, isLoaded, user } = useUser();
-
-  // Debug logging
-  console.log('HomePage - isLoaded:', isLoaded, 'isSignedIn:', isSignedIn, 'user:', user);
+  const { isSignedIn, isLoaded } = useUser();
 
   if (!isLoaded) {
     return (
@@ -24,21 +20,7 @@ export default function HomePage() {
     );
   }
 
-  // If user is not signed in, redirect to sign-in
-  if (!isSignedIn) {
-    // This will only render when user is definitely signed out
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <p>You are not signed in. Redirecting to sign-in...</p>
-          <SignedOut>
-            <RedirectToSignIn />
-          </SignedOut>
-        </div>
-      </div>
-    );
-  }
-
   // If user is signed in, render the dashboard
+  // If not signed in, the layout will handle the authentication UI
   return <Dashboard />;
 }
